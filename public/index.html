@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Projects · Tanmoy Bhattacharjee</title>
+<meta name="description" content="Personal projects by Tanmoy Bhattacharjee, Senior Engineering Manager: small apps and games, each with a live demo and source code.">
+<meta name="author" content="Tanmoy Bhattacharjee">
+<link rel="canonical" href="https://projects.tanmoybh.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0b1020">
+<style>
+:root{
+  --bg:#0b1020;--card:#121a30;--card2:#16203a;--line:#22304f;
+  --text:#e7ecf6;--muted:#9aa7c2;--dim:#6f7d9c;--accent2:#60a5fa;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f6f8fc;--card:#ffffff;--card2:#f3f6fc;--line:#dde4f0;--text:#0f172a;--muted:#475569;--dim:#64748b;--accent2:#2563eb;color-scheme:light}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header{padding:64px 0 28px}
+.eyebrow{font:600 12.5px var(--mono);letter-spacing:.08em;color:var(--accent2)}
+h1{margin:8px 0 6px;font-size:clamp(30px,5vw,42px);line-height:1.15;letter-spacing:-.02em}
+.sub{color:var(--muted);margin:0;max-width:640px}
+.sub a{color:var(--accent2)}.sub a:hover{text-decoration:underline}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;padding-bottom:56px}
+.card{display:flex;flex-direction:column;gap:12px;padding:18px;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+.art{height:140px;border-radius:12px;display:grid;place-items:center;position:relative;overflow:hidden;border:1px solid var(--line);
+  background:radial-gradient(140px 90px at 30% 30%,color-mix(in srgb,var(--c) 30%,transparent),transparent),linear-gradient(135deg,color-mix(in srgb,var(--c) 14%,var(--card2)),var(--card2))}
+.art img{width:84px;height:84px;border-radius:20px}
+.tag{position:absolute;top:10px;left:10px;font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:color-mix(in srgb,var(--bg) 70%,transparent);color:var(--c)}
+h2{margin:0;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:600 12.5px var(--sans);padding:4px 9px;border-radius:8px;color:var(--c);background:color-mix(in srgb,var(--c) 13%,transparent)}
+.links{display:flex;gap:10px;margin-top:auto}
+.btn{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid var(--line);background:var(--card2)}
+.btn:hover{border-color:var(--c)}
+.btn.primary{background:var(--c);border-color:var(--c);color:#0b1020}
+footer{padding:0 0 40px;color:var(--dim);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">// side projects</div>
+    <h1>Personal projects</h1>
+    <p class="sub">Small things I build outside work, each with a live demo and its source code. More about me and my work at <a href="https://tanmoybh.com/">tanmoybh.com</a>.</p>
+  </header>
+
+  <main class="grid">
+    <article class="card" style="--c:#38bdf8">
+      <div class="art"><span class="tag">Game</span><img src="bobia/icons/icon-192.png" alt="" width="84" height="84"></div>
+      <h2>Joy's Island</h2>
+      <p>A birthday treasure hunt game I built for my wife. Walk a winding island road, solve 32 puzzle chests and unlock Heart Castle. Opens with a passphrase, saves progress in the browser and installs to a phone home screen like an app.</p>
+      <div class="chips"><span class="chip">JavaScript + Canvas</span><span class="chip">Vite</span><span class="chip">AES-GCM photo encryption</span></div>
+      <div class="links"><a class="btn primary" href="bobia/">Play</a><a class="btn" href="https://github.com/tanmoy-bh/bobia" target="_blank" rel="noopener">Source</a></div>
+    </article>
+  </main>
+
+  <footer>© Tanmoy Bhattacharjee</footer>
+</div>
+</body>
+</html>
