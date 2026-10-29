@@ -9,6 +9,7 @@
 <link rel="canonical" href="https://projects.tanmoybh.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1020">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <style>
 :root{
   --bg:#0b1020;--card:#121a30;--card2:#16203a;--line:#22304f;
@@ -18,8 +19,9 @@
   color-scheme:dark;
 }
 @media (prefers-color-scheme: light){
-  :root{--bg:#f6f8fc;--card:#ffffff;--card2:#f3f6fc;--line:#dde4f0;--text:#0f172a;--muted:#475569;--dim:#64748b;--accent2:#2563eb;color-scheme:light}
+  :root:not([data-theme="dark"]){--bg:#f6f8fc;--card:#ffffff;--card2:#f3f6fc;--line:#dde4f0;--text:#0f172a;--muted:#475569;--dim:#64748b;--accent2:#2563eb;color-scheme:light}
 }
+:root[data-theme="light"]{--bg:#f6f8fc;--card:#ffffff;--card2:#f3f6fc;--line:#dde4f0;--text:#0f172a;--muted:#475569;--dim:#64748b;--accent2:#2563eb;color-scheme:light}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
@@ -44,12 +46,17 @@ h2{margin:0;font-size:18px}
 .btn{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid var(--line);background:var(--card2)}
 .btn:hover{border-color:var(--c)}
 .btn.primary{background:var(--c);border-color:var(--c);color:#0b1020}
+header{position:relative}
+.themebtn{position:absolute;top:24px;right:0;display:grid;place-items:center;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}
+.themebtn:hover{border-color:var(--accent2)}
+.themebtn .sun{display:none}.themebtn.isdark .sun{display:block}.themebtn.isdark .moon{display:none}
 footer{padding:0 0 40px;color:var(--dim);font-size:13px}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
+    <button class="themebtn" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme"><svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
     <div class="eyebrow">// side projects</div>
     <h1>Personal projects</h1>
     <p class="sub">Small things I build outside work, each with a live demo and its source code. More about me and my work at <a href="https://tanmoybh.com/">tanmoybh.com</a>.</p>
@@ -74,5 +81,15 @@ footer{padding:0 0 40px;color:var(--dim);font-size:13px}
 
   <footer>© Tanmoy Bhattacharjee</footer>
 </div>
+<script>
+(function(){
+  var btn=document.getElementById("theme-toggle"), root=document.documentElement;
+  function isDark(){return root.dataset.theme ? root.dataset.theme==="dark" : !matchMedia("(prefers-color-scheme: light)").matches}
+  function sync(){var d=isDark();btn.classList.toggle("isdark",d);btn.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme")}
+  btn.addEventListener("click",function(){var next=isDark()?"light":"dark";root.dataset.theme=next;try{localStorage.setItem("theme",next)}catch(e){}sync()});
+  matchMedia("(prefers-color-scheme: light)").addEventListener("change",sync);
+  sync();
+})();
+</script>
 </body>
 </html>
