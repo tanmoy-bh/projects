@@ -34,6 +34,7 @@ h1{margin:8px 0 6px;font-size:clamp(30px,5vw,42px);line-height:1.15;letter-spaci
 .art{height:140px;border-radius:12px;display:grid;place-items:center;position:relative;overflow:hidden;border:1px solid var(--line);
   background:radial-gradient(140px 90px at 30% 30%,color-mix(in srgb,var(--c) 30%,transparent),transparent),linear-gradient(135deg,color-mix(in srgb,var(--c) 14%,var(--card2)),var(--card2))}
 .art img{width:84px;height:84px;border-radius:20px}
+.art svg{color:var(--c)}
 .tag{position:absolute;top:10px;left:10px;font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:color-mix(in srgb,var(--bg) 70%,transparent);color:var(--c)}
 h2{margin:0;font-size:18px}
 .card p{margin:0;color:var(--muted);font-size:14.5px}
@@ -61,6 +62,13 @@ footer{padding:0 0 40px;color:var(--dim);font-size:13px}
       <p>A birthday treasure hunt game I built for my wife. Walk a winding island road, solve 32 puzzle chests and unlock Heart Castle. Opens with a passphrase, saves progress in the browser and installs to a phone home screen like an app.</p>
       <div class="chips"><span class="chip">JavaScript + Canvas</span><span class="chip">Vite</span><span class="chip">AES-GCM photo encryption</span></div>
       <div class="links"><a class="btn primary" href="bobia/">Play</a><a class="btn" href="https://github.com/tanmoy-bh/bobia" target="_blank" rel="noopener">Source</a></div>
+    </article>
+    <article class="card" style="--c:#4ade80">
+      <div class="art"><span class="tag">Data · Fintech</span><svg width="84" height="84" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 62c0-26 16-44 46-48-2 30-20 46-46 48z" fill="currentColor" fill-opacity=".14"/><path d="M14 62l26-26"/><path d="M44 66h22M48 66V56M56 66V48M64 66V52"/></svg></div>
+      <h2>Nature Risk Desk</h2>
+      <p>A proof of concept that turns open nature data into a financial signal for lenders. Each loan in a sample agriculture and commodities book gets a nature risk label, score, evidence trail and suggested credit action, with drought and deforestation stress tests and a map of real site data.</p>
+      <div class="chips"><span class="chip">8 open data sources</span><span class="chip">Satellite and climate data</span><span class="chip">Passphrase protected</span></div>
+      <div class="links"><a class="btn primary" href="nature-risk/">Open</a><a class="btn" href="https://github.com/tanmoy-bh/nature-risk" target="_blank" rel="noopener">Source</a></div>
     </article>
   </main>
 

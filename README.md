@@ -9,7 +9,7 @@ Hub for Tanmoy Bhattacharjee's personal projects.
 | --- | --- | --- |
 | `/` | this repo | `tanmoybh-projects` |
 | `/bobia/` | [tanmoy-bh/bobia](https://github.com/tanmoy-bh/bobia) | `tanmoybh-bobia` |
-| `/nature-risk/` | [tanmoy-bh/nature-risk](https://github.com/tanmoy-bh/nature-risk) | `tanmoybh-nature-risk` (passphrase protected, no card on the hub page) |
+| `/nature-risk/` | [tanmoy-bh/nature-risk](https://github.com/tanmoy-bh/nature-risk) | `tanmoybh-nature-risk` (passphrase protected) |
 
 ## Add a project
 
