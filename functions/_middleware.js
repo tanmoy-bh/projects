@@ -7,6 +7,7 @@
 // (for Vite: base: './').
 const APPS = {
   bobia: 'https://tanmoybh-bobia.pages.dev',
+  'nature-risk': 'https://tanmoybh-nature-risk.pages.dev',
 };
 
 export async function onRequest(context) {
