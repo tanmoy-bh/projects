@@ -9,6 +9,7 @@ const APPS = {
   bobia: 'https://tanmoybh-bobia.pages.dev',
   'nature-risk': 'https://tanmoybh-nature-risk.pages.dev',
   'archboard-3d': 'https://tanmoybh-archboard-3d.pages.dev',
+  'engineering-strategy': 'https://tanmoybh-engineering-strategy.pages.dev',
 };
 
 export async function onRequest(context) {

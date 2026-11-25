@@ -11,6 +11,7 @@ Hub for Tanmoy Bhattacharjee's personal projects.
 | `/bobia/` | [tanmoy-bh/bobia](https://github.com/tanmoy-bh/bobia) | `tanmoybh-bobia` |
 | `/nature-risk/` | [tanmoy-bh/nature-risk](https://github.com/tanmoy-bh/nature-risk) | `tanmoybh-nature-risk` (passphrase protected) |
 | `/archboard-3d/` | [tanmoy-bh/archboard-3d](https://github.com/tanmoy-bh/archboard-3d) | `tanmoybh-archboard-3d` (passphrase protected) |
+| `/engineering-strategy/` | [tanmoy-bh/engineering-strategy](https://github.com/tanmoy-bh/engineering-strategy) | `tanmoybh-engineering-strategy` (passphrase protected) |
 
 ## Add a project
 
